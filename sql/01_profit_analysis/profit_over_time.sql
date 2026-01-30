@@ -1,0 +1,43 @@
+/* =====================================================
+    BUSINESS QUESTION:
+    How does profit change over time (MoM)?
+
+    METRICS:
+    - Revenue
+    - COGS
+    - Discount
+    - Marketing Spend
+    - Profit
+    - MoM Growth %
+
+    OUTPUT:
+    Year | Month | Profit | MoM
+===================================================== */
+
+WITH T1 AS (
+    SELECT S.ORDER_ID, S.CUSTOMER_ID, S.PRODUCT_ID, S.CHANNEL, S.CHANNEL_MARKETING, M.CHANNEL AS CHANNEL_FACTMARKETING, S.REGION, S.ORDER_DATE, S.REVENUE, S.COGS, 
+        S.DISCOUNT_AMOUNT, S.[STATUS], C.CAMPAIGN_ID, M.CLICKS, M.IMPRESSION, M.VISIT, M.SPEND, C.CAMPAIGN_NAME, C.OBJECTIVE, c.END_DATE
+    FROM fact_sales S
+        INNER JOIN fact_marketing M ON M.CAMPAIGN_ID = CAST(S.CAMPAIGN_ID AS decimal(10)) AND S.CHANNEL_MARKETING = M.CHANNEL
+        INNER JOIN dim_campaign C ON C.CAMPAIGN_ID = CAST(S.CAMPAIGN_ID AS decimal(10))
+)
+, T2 AS (
+    SELECT YEAR(END_DATE) AS YEAR, MONTH(END_DATE) AS MONTH, CAMPAIGN_ID, CHANNEL_FACTMARKETING, 
+            MAX(SPEND) AS SPEND,
+            SUM(REVENUE) AS REVENUE,
+            SUM(COGS) AS COGS,
+            SUM(DISCOUNT_AMOUNT) AS DISCOUNT
+        FROM T1
+        GROUP BY YEAR(END_DATE), MONTH(END_DATE), CAMPAIGN_ID, CHANNEL_FACTMARKETING
+)
+, T3 AS (
+    SELECT [YEAR], [MONTH], SUM(DISCOUNT) AS DISCOUNT,
+            SUM(REVENUE) - SUM(COGS) - SUM(DISCOUNT) - SUM(SPEND) AS PROFIT
+        FROM T2
+        GROUP BY [YEAR], [MONTH]
+)
+SELECT *,
+        CASE WHEN LAG(PROFIT) OVER(ORDER BY YEAR, MONTH) IS NULL THEN 0
+        ELSE (PROFIT - LAG(PROFIT) OVER(ORDER BY YEAR, MONTH)) * 100 / LAG(PROFIT) OVER(ORDER BY YEAR, MONTH)
+        END AS MoM
+FROM T3
