@@ -77,13 +77,13 @@
 
 ### a. Mục đích, chỉ số chính và các bên liên quan
 
-![Purpose & Metric](purpose_&_metric.png)
+![Purpose & Metric](purpose_metric.png)
 
 ### b. Phân tích giả thuyết, insight, giải pháp
 
-![Giả thuyết & Insight ](gia_thuyet_&_insight.png.png)
-![Giả thuyết & Insight 2](gia_thuyet_&_insight_2.png.png)
-![Giả thuyết & Insight 3](gia_thuyet_&_insight_3.png.png)
+![Giả thuyết & Insight ](giathuyet_insight.png)
+![Giả thuyết & Insight 2](giathuyet_insight_2.png)
+![Giả thuyết & Insight 3](giathuyet_insight_3.png)
 
 ### c. Dashboard cho các cấp
 
