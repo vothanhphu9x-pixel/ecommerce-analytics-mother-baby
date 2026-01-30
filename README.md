@@ -73,7 +73,7 @@ The data warehouse follows a star schema design to support analytical queries.
 
 #### 6.1. Overview of Campaign Performance Over Time
 
-![Overview of Campaign Performance](dashboard/sales_overview.png)
+![Overview of Campaign Performance](Overview_of_Campaign_Performance.png)
 **Key Insights:**
 
 - Total clicks, impressions, spend, profit, and discount by month
@@ -85,7 +85,7 @@ The data warehouse follows a star schema design to support analytical queries.
 
 #### 6.2. Metrics of Marketing Performance
 
-![Metrics of Marketing Performance](dashboard/marketing_performance.png)
+![Metrics of Marketing Performance](Metrics_of_Marketing_Performance.png)
 **Key Insights:**
 
 - Relationship between conversion rate (CR), click-through rate (CTR), spend, profit, CPM, CPC
@@ -96,7 +96,7 @@ The data warehouse follows a star schema design to support analytical queries.
 
 #### 6.3. Discount of Marketing Performance
 
-![Discount of Marketing Performance](dashboard/discount_performance.png)
+![Discount of Marketing Performance](Discount_of_Marketing_Performance.png)
 **Key Insights:**
 
 - Impact of discount on CR and profit
@@ -107,7 +107,7 @@ The data warehouse follows a star schema design to support analytical queries.
 
 #### 6.4. Campaign Information & Index
 
-![Campaign Information](dashboard/campaign_information.png)
+![Campaign Information](Campaign_Information_&_Index.png)
 **Key Insights:**
 
 - Profit, discount, spend, AOV, CTR, CR, ROAS, ROI by campaign/month
@@ -118,18 +118,15 @@ The data warehouse follows a star schema design to support analytical queries.
 
 #### 6.5. Segment by Season & Channel
 
-![Segment by Season & Channel](dashboard/segment_by_season_channel.png)
+![Segment by Season & Channel](Segment_by_Season_& _Channel.png)
 **Key Insights:**
 
 - Campaign performance by season and channel
 - Segment analysis: OWNER/DIRECT, SEARCH/E-commerce, Social Media
-- Top campaigns by season, channel, and segment
-
----
-
+- Top campaigns by season, channel
 #### 6.6. Campaign Comparison (Detail)
 
-![Campaign Comparison](dashboard/campaign_comparison.png)
+![Campaign Comparison](Campaign_Comparison_(Detail).png)
 **Key Insights:**
 
 - Compare spend, discount, profit, clicks, impressions, CTR, CR, CPC, CPM, ROAS, ROI between selected campaigns
