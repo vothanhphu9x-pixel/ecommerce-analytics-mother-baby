@@ -73,7 +73,7 @@ The data warehouse follows a star schema design to support analytical queries.
 
 #### 6.1. Overview of Campaign Performance Over Time
 
-![Overview of Campaign Performance](Overview_of_Campaign_Performance.png)
+![Overview of Campaign Performance](Overview_of_Campaign_Performance_Over_Time.png)
 **Key Insights:**
 
 - Total clicks, impressions, spend, profit, and discount by month
@@ -118,7 +118,8 @@ The data warehouse follows a star schema design to support analytical queries.
 
 #### 6.5. Segment by Season & Channel
 
-![Segment by Season & Channel](Segment_by_Season_& _Channel.png)
+![Segment by Season & Channel](Segment_by_Season_&_Channel.png)
+
 **Key Insights:**
 
 - Campaign performance by season and channel
