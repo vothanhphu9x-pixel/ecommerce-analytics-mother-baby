@@ -82,7 +82,7 @@
 ### b. Phân tích giả thuyết, insight, giải pháp
 
 ![Giả thuyết & Insight ](giathuyet_insight.png)
-![Giả thuyết & Insight 2](giathuyet_insight2.png)
+![Giả thuyết & Insight 2](Giathuyet_insight2.png)
 ![Giả thuyết & Insight 3](giathuyet_insight3.png)
 
 ### c. Dashboard cho các cấp
