@@ -42,7 +42,7 @@ The data warehouse follows a star schema design to support analytical queries.
 - Fact tables: fact_sales, fact_marketing, fact_ux
 - Dimension tables: dim_customer, dim_product, dim_campaign
 
-![Star Schema](docs/SCHEMA.PNG)
+![Star Schema](SCHEMA.PNG)
 
 ## 5. Key Metrics
 
